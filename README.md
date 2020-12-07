@@ -43,11 +43,15 @@
         <li>tone.draw for visual element when music is played </li>
         <li>harvard art museum for used images(im not sure yet!)</li>
       </ul>
- 
+      <h3> This project will feature the following scripts:</h3>
+      <ul>
+        <li>board.js for puzzle logic and arrangement of placing pieces of image on the board</li>
+        <li>chord.js for note logic </li>
+        <li>puzzlePiece.js for combining notes and puzzle pieces together 🤯</li>
+      </ul>
   </p>
   
   <h2>Implementation Timeline</h2>
-  <p>THERE IS SOME CRAZY HTML ERROR I CANT FIND IN THE READ ME BELOW THIS POINT(I WILL FIX IT LATER) 😢 </p>
     <h3> Day 1: </h3>
       <p>
         Become one with tone.js and decide which instruments and chord I will choose for my puzzle. Learn how to display and render the main chord or sample track I          will be using. Configure the absolute miniimum I need for music to display on the page.
