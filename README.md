@@ -30,6 +30,6 @@
   <h2>Wireframes</h2>
   <p>
     This app will be a single paged app that will feature a main board with puzzle pieces on the outside of the main square.
-    ![](src/images/jigsaw_rhapsody_wireframe.png)
+    <img src="(src/images/jigsaw_rhapsody_wireframe.png" width="700px"/>
   </p>
 </body>
