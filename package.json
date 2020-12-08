@@ -1,8 +1,8 @@
 {
-  "name": "js_project_skeleton",
+  "name": "javascript_skeleton",
   "version": "1.0.0",
   "description": "skeleton for new JS project",
-  "main": "index.js",
+  "main": "./src/index.js",
   "browserslist": [
     "last 1 version",
     "> 1%",
@@ -16,7 +16,9 @@
   },
   "author": "jhilesyoung",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "tone": "^14.7.58"
+  },
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/plugin-proposal-optional-chaining": "^7.11.0",
