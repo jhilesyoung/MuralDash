@@ -5,18 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
-    <title>Jigsaw Rhapsody</title>
+    <title>Mural Melody</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body>
-    <div style="background-image: url('./src/images/marble_background.jpg');"></div>
-    <img src='./src/images/puzzle_frame_transparent.png' class="puzzle-frame">
-    <div class="note-buttons">
-      <button onclick="playC4()" id="synth-C4">C4</button>
-      <button onclick="playE4()" id="synth-E4">E4</button>
-      <button onclick="playG4()" id="synth-G4">G4</button>
-      <button onclick="playB4()" id="synth-B4">B4</button>
+    <div class="game-board">
+      <div style="background-image: url('./src/images/marble_background.jpg');"></div>
+      <div class="puzzle-and-picture">
+        <img src='./src/images/puzzle_frame_transparent.png' class="puzzle-frame">
+        <div id="main-picture"></div>
+        <div class="note-buttons">
+          <button onclick="playC4()" id="synth-C4">C4</button>
+          <button onclick="playE4()" id="synth-E4">E4</button>
+          <button onclick="playG4()" id="synth-G4">G4</button>
+          <button onclick="playB4()" id="synth-B4">B4</button>
+          <button onclick="fullSong()" id="full-song">Full Song</button>
+          <button onclick="puzzlePicture()" id="puzzle-picture">picture</button>
+        </div>
+      </div>
+
     </div>
+
+    <!--KEEP EVERYTHING BELOW THIS COMMENTED OUT-->
 
     <!-- <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
 
@@ -31,8 +42,14 @@
             <p>Hey girl</p>
             <p>WHat's up</p>
         </div>
-      </div> -->
+      </div>
+      KEEP EVERYTHING ABOVE THIS COMMENTED IN
+    -->
+
+      
   </body>
 
   <script src="./dist/main.js"></script>
 </html>
+
+
