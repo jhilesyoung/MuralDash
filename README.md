@@ -31,7 +31,7 @@
   <p>
     This is a single paged app that will feature a main board with a race track on a default background. The user will be prompted to set up their environment with a background image or song prior to playing. There will be designated buttons to instruct on how to control the car on the right as well as background and song buttons(3 of each that can mix and matched)The nav links will feature the relevant links to my github, linkedin, and portfolio site. The title will be placed along the side above the controls(bonus features may include more than 3 song options and more than one background image to be rendered from the museum api.)
   <br/>
-    <img src="src/images/jigsaw_rhapsody_wireframe.png" width="700px">
+    <img src="src/images/mural_melody_wireframe.png" width="700px">
   </p>
   
   <h2>Architecture and Technologies</h2>
