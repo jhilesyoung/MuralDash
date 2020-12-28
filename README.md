@@ -1,21 +1,21 @@
+
 <body>
-  <h1>Jigsaw Rhapsody</h1>
+  <h1> MuralDash</h1>
 
   <br/>
-
+  
   <h2>Background & Overview</h2>
   <p> 
-    Jigsaw Rhapsody is an interactive artwork puzzle game that plays a complete set of chords when the puzzle is complete. Each puzzle piece will hold a note that completes the chord for that particular puzzle. When a piece is placed on the board, the note will play. The user will have a choice to play the set of notes that they have placed at anytime and incorrect positions will have a note that does not fit. Particularly some sort of jarring distortion effect that signals that it is obvious something is wrong.
+   MuralDash is an interactive artwork racing game.
   </p>
   
   <h2>Functionality & MVP</h2>
   <p>
-    <h3>Jigsaw Rhapsody will have the following core functionality for a minimum viable product:</h3>
+    <h3>Mural Dash will be a top-down racing game and will have the following core functionality for a minimum viable product:</h3>
     <ul>
-      <li> Users can play the finished audio of the puzzle before beginning the puzzle.</li>
-      <li> Users can play each note on the puzzle piece when clicking.</li>
-      <li> Users will have the option to mute audio and play without sound.</li>
-      <li> Users can download the picture and audio of finished puzzles.</li>
+      <li> Users can control the speed of the car with designated arrow keys.</li>
+      <li> Users can render a background image of a specified harvard museum picture.</li>
+      <li> Users will have the option to pick a different theme song.</li>
      </ul>
   </p>
   
@@ -29,9 +29,9 @@
   
   <h2>Wireframes</h2>
   <p>
-    This is a single paged app that will feature a main board with puzzle pieces on the outside of the main square. The puzzle pieces surrounding the game board will be drag and drop elements that will populate the board to create the final image. The controls on the left-side will feature a mute, volume handle, and play/pause button to play the current notes that they have placed. The nav links will feature the relevant links to my github, linkedin, and portfolio site. The title will be placed atop the board(bonus features may include rotating or animated puzzle pieces that move when the music is played and controls may feature themed puzzles with associated music themes)
+    This is a single paged app that will feature a main board with a race track on a default background. The user will be prompted to set up their environment with a background image or song prior to playing. There will be designated buttons to instruct on how to control the car on the right as well as background and song buttons(3 of each that can mix and matched)The nav links will feature the relevant links to my github, linkedin, and portfolio site. The title will be placed along the side above the controls(bonus features may include more than 3 song options and more than one background image to be rendered from the museum api.)
   <br/>
-    <img src="src/images/jigsaw_rhapsody_wireframe.png" width="700px">
+    <img src="src/images/mural_melody_wireframe.png" width="700px">
   </p>
   
   <h2>Architecture and Technologies</h2>
@@ -39,38 +39,39 @@
   <p>
     <h3> This project will implement the following technologies:</h3>
       <ul>
-        <li>tone.js for notes on the puzzle board</li>
-        <li>tone.draw for visual element when music is played </li>
+        <li>tone.js for various song choices</li>
+        <li>paper.js to create the shape of the track</li>
         <li>harvard art museum for used images(im not sure yet!)</li>
       </ul>
       <h3> This project will feature the following scripts:</h3>
       <ul>
-        <li>board.js for puzzle logic and arrangement of placing pieces of image on the board</li>
-        <li>chord.js for note logic </li>
-        <li>puzzlePiece.js for combining notes and puzzle pieces together 🤯</li>
+        <li>board.js for game logic and elements for user control</li>
+        <li>chord.js for song options logic </li>
+        <li>museum.js for combining api and render logic(bonus for random image background)</li>
       </ul>
   </p>
   
   <h2>Implementation Timeline</h2>
     <h3> Day 1: </h3>
       <p>
-        Become one with tone.js and decide which instruments and chord I will choose for my puzzle. Learn how to display and render the main chord or sample track I          will be using. Configure the absolute miniimum I need for music to display on the page.
+        Create more options for songs that will play. I have familiarity with tone.js and an original song for my MuralDash with tone.js. I will create two other songs and assign them to buttons that can be played when clicked.
        </p>
     <h3> Day 2: </h3>
-      <p> Research puzzle logic for randomizing and breaking up images into pieces to form a puzzle board. Solidify my knowledge in connected image api used for p          puzzle board. I should be able to successfully render a random artwork by E.O.D.
+      <p> Research paper.js logic for rendering shape of the track and begin design for the race car. By E.O.D. I should have a rendered race track and overall board shape finished.
       </p>
      <h3> Day 3: </h3>
-     <p> Start to connect puzzle piece elements to individual notes and have notes play when user clicks a puzzle piece. Allow user to place puzzle pieces on the           board.</p>
+     <p> Finish race car design and start to work on controls for the car to follow the race track.</p>
      <h3> Day 4: </h3>
-     <p> Design game board and figure out music controls on the panel to allow user to adjust volume, play/pause/mute.  </p>
+     <p> Continue work on race car controls and begin logic for win/loss or infinite amount of play.</p>
+     <h3> Day 5: </h3>
+     <p> Finalize overall design of race track with animations based on win/loss.</p>
      
   <h2> Bonus Features </h2>
-    Ideally, I want this to be a real musical and interactive experience that is visually captivating, but provides the user with some sort of challenge. 
+    Ideally, I want this to be a real fun and interactive experience that is captivating through an audio and visual aspect, but provides the user with some sort of challenge. 
     <p>
       <ul>
-        <li>Make puzzle pieces constantly rotate around in place, then make them rotate around the board. </li>
-        <li>Allow user to toggle different amount of puzzle pieces and different artwork categories.</li>
-        <li>Allow user to choose theme of music played.</li>
+        <li>Create a random artwork button that will render a random image from the museum api based on category</li>
+        <li>Allow user to create their own theme song with a selection of 3-5 notes and a play button that will loop.</li>
       </ul>
     </p>
 </body>
