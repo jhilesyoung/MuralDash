@@ -10,27 +10,43 @@ html {
     background-size: cover;
   }
 
-.puzzle-frame {
-    height: 90vh;
-    /* top: 11px; */
+  .game-board {
+    display: flex;
     position: relative;
-    top: 15px;
-    right: 100px;
-}
+    flex-direction: row;
+  }
 
-.note-buttons {
+  .puzzle-and-picture {
+    display: flex;
+    position: absolute;
+  }
+
+  .puzzle-frame {
+    display: flex;
+    position: absolute;
+    height: 94vh;
+    width: 70vw;
+  }
+
+  .note-buttons {
     position: relative;
     display: flex;
     flex-direction: column;
-}
-
-.puzzle-and-picture {
+    left: 1000px;
+  }
+ 
+  .frame-and-canvas {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    position: relative;
+  }
 
-.title {
-    
-}
+  #myCanvas {
+    background-color: aliceblue;
+    top: 103px;
+    display: flex;
+    position: absolute;
+    left: 141px;
+    height: 62vh;
+    width: 49vw;
+  }
 

@@ -17,6 +17,7 @@
   "author": "jhilesyoung",
   "license": "ISC",
   "dependencies": {
+    "paper": "^0.12.11",
     "tone": "^14.7.58"
   },
   "devDependencies": {

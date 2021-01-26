@@ -1,4 +1,26 @@
-button:hover{cursor:pointer}html{background:url(images/marble_background.jpg) no-repeat center center fixed;background-size:cover}.puzzle-frame{height:90vh;position:relative;top:15px;right:100px}.note-buttons{position:relative;display:flex;flex-direction:column}.puzzle-and-picture{display:flex;justify-content:center;align-items:center}
+button:hover {
+  cursor: pointer; }
+
+html {
+  background: url(images/marble_background.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.puzzle-frame {
+  height: 90vh;
+  /* top: 11px; */
+  position: relative;
+  top: 15px;
+  right: 100px; }
+
+.note-buttons {
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+
+.puzzle-and-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 
-/*# sourceMappingURL=main.css.map*/
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3R5bGVzL2luZGV4LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQSxrQkFBa0I7O0FBRWxCO0FBQ0E7QUFDQSx5QkFBeUI7O0FBRXpCO0FBQ0E7QUFDQSxlQUFlO0FBQ2Y7QUFDQTtBQUNBLGVBQWU7O0FBRWY7QUFDQTtBQUNBO0FBQ0EseUJBQXlCOztBQUV6QjtBQUNBO0FBQ0E7QUFDQSxzQkFBc0IiLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJidXR0b246aG92ZXIge1xuICBjdXJzb3I6IHBvaW50ZXI7IH1cblxuaHRtbCB7XG4gIGJhY2tncm91bmQ6IHVybChpbWFnZXMvbWFyYmxlX2JhY2tncm91bmQuanBnKSBuby1yZXBlYXQgY2VudGVyIGNlbnRlciBmaXhlZDtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjsgfVxuXG4ucHV6emxlLWZyYW1lIHtcbiAgaGVpZ2h0OiA5MHZoO1xuICAvKiB0b3A6IDExcHg7ICovXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgdG9wOiAxNXB4O1xuICByaWdodDogMTAwcHg7IH1cblxuLm5vdGUtYnV0dG9ucyB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgfVxuXG4ucHV6emxlLWFuZC1waWN0dXJlIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7IH1cbiJdLCJzb3VyY2VSb290IjoiIn0=*/
