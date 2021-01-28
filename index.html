@@ -7,98 +7,11 @@
     <link rel="stylesheet" href="./dist/main.css" />
     <title>Mural Melody</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./src/scripts/paper-full.js"></script>
-    <script type="text/paperscript" canvas="myCanvas" class="canvas" >
-      var values = {
-        paths: 50,
-        minPoints: 5,
-        maxPoints: 15,
-        minRadius: 30,
-        maxRadius: 90
-      };
-      
-      var hitOptions = {
-        segments: true,
-        stroke: true,
-        fill: true,
-        tolerance: 5
-      };
-      
-      createPaths();
-      
-      function createPaths() {
-        var radiusDelta = values.maxRadius - values.minRadius;
-        var pointsDelta = values.maxPoints - values.minPoints;
-        for (var i = 0; i < values.paths; i++) {
-          var radius = values.minRadius + Math.random() * radiusDelta;
-          var points = values.minPoints + Math.floor(Math.random() * pointsDelta);
-          var path = createBlob(view.size * Point.random(), radius, points);
-          var lightness = (Math.random() - 0.5) * 0.4 + 0.4;
-          var hue = Math.random() * 360;
-          path.fillColor = { hue: hue, saturation: 1, lightness: lightness };
-          path.strokeColor = 'black';
-        };
-      }
-      
-      function createBlob(center, maxRadius, points) {
-        var path = new Path();
-        path.closed = true;
-        for (var i = 0; i < points; i++) {
-          var delta = new Point({
-            length: (maxRadius * 0.5) + (Math.random() * maxRadius * 0.5),
-            angle: (360 / points) * i
-          });
-          path.add(center + delta);
-        }
-        path.smooth();
-        return path;
-      }
-      
-      var segment, path;
-      var movePath = false;
-      function onMouseDown(event) {
-        segment = path = null;
-        var hitResult = project.hitTest(event.point, hitOptions);
-        if (!hitResult)
-          return;
-      
-        if (event.modifiers.shift) {
-          if (hitResult.type == 'segment') {
-            hitResult.segment.remove();
-          };
-          return;
-        }
-      
-        if (hitResult) {
-          path = hitResult.item;
-          if (hitResult.type == 'segment') {
-            segment = hitResult.segment;
-          } else if (hitResult.type == 'stroke') {
-            var location = hitResult.location;
-            segment = path.insert(location.index + 1, event.point);
-            path.smooth();
-          }
-        }
-        movePath = hitResult.type == 'fill';
-        if (movePath)
-          project.activeLayer.addChild(hitResult.item);
-      }
-      
-      function onMouseMove(event) {
-        project.activeLayer.selected = false;
-        if (event.item)
-          event.item.selected = true;
-      }
-      
-      function onMouseDrag(event) {
-        if (segment) {
-          segment.point += event.delta;
-          path.smooth();
-        } else if (path) {
-          path.position += event.delta;
-        }
-      }
-    </script>
+    <!-- <script type="text/javascript" src="./src/scripts/paper-full.js"></script>
+    <script type="text/paperscript" canvas="myCanvas" width="400" height="300" class="canvas" >
+     
+    </script> -->
+    <script type="text/javascript" canvas="myCanvas" src="./src/scripts/track.js"></script>
   </head>
 
   <body>
@@ -107,24 +20,28 @@
     <div class="game-board">
       <div style="background-image: url('./src/images/marble_background.jpg');"></div>
             <div class="frame-and-canvas">
-              <img src='./src/images/puzzle_frame_transparent.png' class="puzzle-frame">
+              <!-- <img src='./src/images/puzzle_frame_transparent.png' class="puzzle-frame"> -->
               <canvas id="myCanvas" > </canvas>
             </div>
+            <div class="note-buttons">
+              <!-- <button onclick="playC4()" id="synth-C4">C4</button>
+                <button onclick="playE4()" id="synth-E4">E4</button>
+                <button onclick="playG4()" id="synth-G4">G4</button>
+                <button onclick="playB4()" id="synth-B4">B4</button> -->
+                <img src='./src/images/mural_dash_logo.gif' class="logo">
+                <img src='./src/images/controls.gif' class="controls-logo">
+              <div class="music">
+                <button  id="easy">Easy</button>
+                <button  id="medium">Medium</button>
+                <button  id="hard">Hard</button>
+              </br>
+            </br>
+                <button  id="stop-full-song">Stop!</button>
+              </div>
+
+                <img src='./src/images/easy_mode.png'  class="easy-mode">
+            </div>
               <!-- <div id="main-picture" width="350px"></div> -->
-        <div class="note-buttons">
-          <!-- <button onclick="playC4()" id="synth-C4">C4</button>
-            <button onclick="playE4()" id="synth-E4">E4</button>
-            <button onclick="playG4()" id="synth-G4">G4</button>
-            <button onclick="playB4()" id="synth-B4">B4</button> -->
-            <img src='./src/images/mural_dash_logo.gif' class="logo">
-            <img src='./src/images/controls.gif' class="controls-logo">
-            
-            <button onclick="fullSong()" id="full-song">MuralDash Melody</button>
-            <button onclick="stopFullSong()" id="stop-full-song">Stop</button>
-            
-            <button onclick="alternativeSong()" id="alternative-song">Distorted Melody</button>
-            
-        </div>
     </div>
             <!-- <button onclick="puzzlePicture()" id="main-picture">picture</button>  -->
       <!-- <canvas id="myCanvas" resize> </canvas> -->
