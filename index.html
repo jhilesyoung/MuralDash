@@ -5,70 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
-    <title>Mural Melody</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="./src/scripts/paper-full.js"></script>
-    <script type="text/paperscript" canvas="myCanvas" width="400" height="300" class="canvas" >
-     
-    </script> -->
-    <script type="text/javascript" canvas="myCanvas" src="./src/scripts/track.js"></script>
+    <title>Mural Dash</title>
   </head>
-
+  
   <body>
     
-   
-    <div class="game-board">
-      <div style="background-image: url('./src/images/marble_background.jpg');"></div>
-            <div class="frame-and-canvas">
-              <!-- <img src='./src/images/puzzle_frame_transparent.png' class="puzzle-frame"> -->
-              <canvas id="myCanvas" > </canvas>
-            </div>
-            <div class="note-buttons">
-              <!-- <button onclick="playC4()" id="synth-C4">C4</button>
-                <button onclick="playE4()" id="synth-E4">E4</button>
-                <button onclick="playG4()" id="synth-G4">G4</button>
-                <button onclick="playB4()" id="synth-B4">B4</button> -->
-                <img src='./src/images/mural_dash_logo.gif' class="logo">
-                <img src='./src/images/controls.gif' class="controls-logo">
-              <div class="music">
-                <button  id="easy">Easy</button>
-                <button  id="medium">Medium</button>
-                <button  id="hard">Hard</button>
-              </br>
-            </br>
-                <button  id="stop-full-song">Stop!</button>
-              </div>
-
-                <img src='./src/images/easy_mode.png'  class="easy-mode">
-            </div>
-              <!-- <div id="main-picture" width="350px"></div> -->
+    <div class="btnStart"> Start Game </div>
+    <div class="dashboard">
+      <span class="speedDash"></span>/MPH | 
+      Score: <span class="scoreDash"></span> |
+      <span class="lifeDash"></span>
     </div>
-            <!-- <button onclick="puzzlePicture()" id="main-picture">picture</button>  -->
-      <!-- <canvas id="myCanvas" resize> </canvas> -->
-
-    <!--KEEP EVERYTHING BELOW THIS COMMENTED OUT-->
-
-    <!-- <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
-
-      <div id="id01" class="w3-modal">
-        <div class="w3-modal-content w3-card-4">
-          <header class="w3-container w3-teal"> 
-            <span onclick="document.getElementById('id01').style.display='none'" 
-            class="w3-button w3-display-topright">&times;</span>
-            <h2>About</h2>
-          </header>
-          <div class="w3-container">
-            <p>Hey girl</p>
-            <p>WHat's up</p>
-        </div>
-      </div>
-      KEEP EVERYTHING ABOVE THIS COMMENTED IN
-    -->
-
+    
+    <div id="container">
       
+    </div>
+    
+    
+    <div class="music">
+     <button  id="easy">Easy</button>
+     <button  id="medium">Medium</button>
+     <button  id="hard">Hard</button>
+   </br>
+  </br>
+     <button  id="stop-full-song">Stop!</button>
+   </div> 
   </body>
-
+  
+  <script src="./src/scripts/track.js"></script>
   <script src="./dist/main.js"></script>
-</html>
+  </html>
+  
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <!-- <script type="text/javascript" src="./src/scripts/paper-full.js"></script>
+  <script type="text/paperscript" canvas="myCanvas" width="400" height="300" class="canvas" >
+   
+  </script> -->
+  <!-- <script type="text/javascript" canvas="myCanvas" src="./src/scripts/track.js"></script>
+  <script type="text/paperscript" canvas="myCanvas" src="./src/scripts/paper-full.js"> -->
+    
+  <!-- </script> -->
+  
+  
+  <!-- <div class="game-board">
+    <div style="background-image: url('./src/images/marble_background.jpg');"></div>
+          <div class="frame-and-canvas">
+             <img src='./src/images/puzzle_frame_transparent.png' class="puzzle-frame"> -->
+            <!-- <canvas id="myCanvas" > </canvas>
+          </div>
+          <div class="note-buttons"> -->
+            <!-- <button onclick="playC4()" id="synth-C4">C4</button>
+              <button onclick="playE4()" id="synth-E4">E4</button>
+              <button onclick="playG4()" id="synth-G4">G4</button>
+              <button onclick="playB4()" id="synth-B4">B4</button> -->
+              <!-- <img src='./src/images/mural_dash_logo.gif' class="logo">
+              <img src='./src/images/controls.gif' class="controls-logo">
 
-
+              <img src='./src/images/easy_mode.png'  class="easy-mode">
+          </div>
+             <div id="main-picture" width="350px"></div> -->
+  <!-- </div> --> 
+          <!-- <button onclick="puzzlePicture()" id="main-picture">picture</button>  -->
+    <!-- <canvas id="myCanvas" resize> </canvas> -->

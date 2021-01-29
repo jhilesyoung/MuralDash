@@ -1,85 +1,79 @@
-
-.game-board {
-    display: flex;
+#container {
     position: relative;
-    flex-direction: row;
-  }
-
-  .puzzle-and-picture {
-    display: flex;
-    position: absolute;
-  }
-
-  .puzzle-frame {
-    display: flex;
-    position: absolute;
-    height: 94vh;
-    width: 70vw;
-  }
- 
-  .frame-and-canvas {
-    display: flex;
-    position: absolute;
-    flex-direction: row;
-  }
-
-  #myCanvas {
-     background-color: aliceblue;
-     top: 103px;
-     display: flex;
-     position: absolute;
-     left: 101px;
-     height: 62vh;
-     width: 49vw;
-     border: 5px groove orange;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain; 
-  }
- 
- 
- button:hover {
-    cursor: pointer;
-}
-
-html { 
-    background: url('../images/marble_background.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-.note-buttons {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    right: 118px;
-    top: 22px;
-}
-
-.music {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-    left: -7px;
-}
-
-#easy {
+    height: 600px;
+    width: 800px;
+    left: 5%;
     background-color: green;
+    overflow: hidden;
 }
 
-#medium {
-    background-color: yellow;
+.dashboard{
+    background-color: rgb(214, 45, 200);
+    color:white;
+    font-size:1.5em;
+    text-align: center;
+    padding:15px;
 }
 
-#hard {
+.btnStart {
+    position: absolute;
+    top: 480px;
+    left: 20%;
+    width: 200px;
+    border: 1px solid black;
     background-color: red;
+    color: white;
+    font-size: 2em;
+    z-index: 200;
+    text-align: center;
+    border-radius: 25px;
+    padding: 5px;
 }
 
-.easy-mode {
-    display: none;
+.road {
+    position: absolute; height: 50px;
+    width: 250px;
+    top: 0;
+    text-align: center;
+    color: white;
+    background-color: #444;
+    border-radius: 2px;
+    left: 150px;
+    height: 55px;
 }
 
+.baddy {
+    position: absolute;
+    height: 80px;
+    width:40px;
+    top:0px;
+    left:0px;
+    border-radius: 5px;
+    background-image: url('../images/car2.png');
+    background-size: cover;
+    z-index: 99;
+    text-align: center;
+}
 
+.road:before{
+    content: "|";
+    vertical-align: top;
+    color:white;
+    width:1px;
+    height:10px;
+    line-height: 30px;
+    left:50%;
+    position: absolute;
+}
+
+.playerCar {
+    position: absolute;
+    height: 80px;
+    width: 50px;
+    bottom: 60px;
+    left: 250px;
+    border-radius: 5px;
+    background-image: url('../images/raceCar.png');
+    background-size: cover;
+    z-index: 100;
+}

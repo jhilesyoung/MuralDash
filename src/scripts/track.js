@@ -1,45 +1,177 @@
-(function(){
+const speedDash = document.querySelector('.speedDash');
+const scoreDash = document.querySelector('.scoreDash');
+const lifeDash = document.querySelector('.lifeDash');
+const container = document.getElementById('container');
+const btnStart = document.querySelector('.btnStart');
+btnStart.addEventListener('click', startGame);
+document.addEventListener('keydown', pressKeyOn);
+document.addEventListener('keyup', pressKeyOff);
+//Game V's
+let gamePlay = false
 
-    function init(){
-        var canvas = document.getElementsByTagName('canvas')[0];
-        var c = canvas.getContext('2d');
+let player;
+let animationGame = requestAnimationFrame(playGame)
+let keys = {
+    ArrowUp: false,
+    ArrowDown: false,
+    ArrowLeft: false,
+    ArrowRight: false,
+}
 
-        var img = document.getElementsByClassName('easy-mode')[0];
-        var velocity = 200; //400pixels/second
-        var distance =0;
-        var lastFrameRepaintTime =0;
+function startGame() {
+    console.log(gamePlay)
+    btnStart.style.display='none'
+    let div = document.createElement('div');
+    div.setAttribute('class', 'playerCar');
+    div.x = 250;
+    div.y = 500;
+    container.appendChild(div);
+    gamePlay = true;
+    player = {
+        ele:div,
+        speed: 1,
+        lives: 3,
+        gameScore: 0,
+        carstoPass: 10,
+        score: 0,
+        roadwidth: 250
+    }
+    startBoard();
+    setupBadGuys(10);
 
-        function calcOffset(time){
-            var frameGapTime = time - lastFrameRepaintTime;
-            lastFrameRepaintTime = time;
-            var translateX = velocity*(frameGapTime/1000);
-            return translateX;
+}
+
+function setupBadGuys(num) {
+    for (let x = 0; x < num; x++) {
+        let temp = 'badGuy' + (x + 1);
+        let div = document.createElement('div');
+        div.innerHTML = (x + 1);
+        div.setAttribute('class', 'baddy');
+        div.setAttribute('id', temp);
+        makeBad(div);
+        container.appendChild(div);
+    }
+}
+
+function randomColor() {
+    function c() {
+        let hex = Math.floor(Math.random() * 256).toString(16);
+        return ('0' + String(hex)).substr(-2);
+    }
+    return '#' + c() + c() + c();
+}
+
+function makeBad(e) {
+    let tempRoad = document.querySelector('.road');
+    e.style.left = tempRoad.offsetLeft + Math.ceil(Math.random() * tempRoad.offsetWidth) - 30 + 'px';
+    e.style.top = Math.ceil(Math.random() * -400) + 'px';
+    e.speed = Math.ceil(Math.random() * 17) + 2;
+    e.style.backgroundColor = randomColor();
+}
+
+function startBoard() {
+    for(let x = 0; x < 13; x++) {
+        let div = document.createElement('div');
+        div.setAttribute('class', 'road');
+        div.style.top = (x*50) + 'px';
+        div.style.width = player.roadwidth + 'px';
+        container.appendChild(div);
+    }
+}
+
+function pressKeyOn(event) {
+    event.preventDefault();
+    // console.log(event.key)
+    keys[event.key] = true
+}
+
+function pressKeyOff(event) {
+    event.preventDefault();
+    // console.log(keys)
+    keys[event.key] = false;
+}
+function updateDash() {
+    // console.log(player);
+    scoreDash.innerHTML = player.score;
+    lifeDash.innerHTML = player.lives;
+    speedDash.innerHTML = Math.round(player.speed*14);
+}
+
+function moveRoad() {
+    let tempRoad = document.querySelectorAll('.road');
+    // console.log(tempRoad);
+    let previousRoad = tempRoad[0].offsetLeft;
+    let previousWidth = tempRoad[0].width;
+    const pSpeed = player.speed
+    for (let x = 0; x < tempRoad.length; x++) {
+        let num = tempRoad[x].offsetTop + pSpeed;
+        if (num > 600) {
+            num = num - 650;
+            let mover = previousRoad + (Math.floor(Math.random()*6)-3);
+            let roadWidth = (Math.floor(Math.random()*11)-5)+previousWidth;
+            if (roadWidth < 200) roadWidth = 200;
+            if (roadWidth > 400) roadWidth = 400;
+            if (mover < 100) mover = 100;
+            if (mover > 600) mover = 600;
+            tempRoad[x].style.left = mover + 'px';
+            tempRoad[x].style.width = roadWidth + 'px';
+            previousRoad = tempRoad[x].offsetLeft;
+            previousWidth = tempRoad[x].width;
         }
-        function draw(time){
-           distance += calcOffset(time);
-            if(distance > img.width){distance =0;}
-            c.clearRect(0,0,canvas.width,canvas.height);
-            c.save();
-            c.translate(distance,0);
-            c.drawImage(img,0,0);
-            c.drawImage(img,-img.width+1,0);
+        tempRoad[x].style.top = num + 'px'
+    }
+    return {'width': previousWidth, 'left': previousRoad}
+}
 
-            requestAnimationFrame(draw);
-
-
-            c.restore();
+function moveBadGuys() {
+    let tempBaddy = document.querySelectorAll('.baddy');
+    for (let i = 0; i < tempBaddy.length; i++) {
+        let y = tempBaddy[i].offsetTop + player.speed - tempBaddy[i].speed;
+        if ( y > 2000 || y < -2000 ) {
+            //resetcar
+            makeBad(tempBaddy[i]);
+        } else {
+            tempBaddy[i].style.top = y + 'px';
         }
-        function start(){
-            lastFrameRepaintTime = window.performance.now();
-            requestAnimationFrame(draw);
-        }
+    }
+}
 
-        start();
-
-
+function playGame() {
+    if (gamePlay) {
+    updateDash();
+    //movement
+    let roadParam = moveRoad();
+    moveBadGuys();
+    if (keys.ArrowUp) {
+        if (player.ele.y > 400) player.ele.y -= 1;
+        player.speed = player.speed < 20 ? (player.speed + 0.05) :20;
     }
 
-//invoke function init once document is fully loaded
-    window.addEventListener('load',init,false);
+    if (keys.ArrowDown) {
+        if(player.ele.y < 500) {
+        player.ele.y += 1;
+        }
+        player.speed = player.speed > 0 ? (player.speed - 0.2) :0;
+        
+    }
+    if (keys.ArrowRight) {
+        player.ele.x += (player.speed/2)
+    }
+    if (keys.ArrowLeft) {
+        player.ele.x -= (player.speed/2)
+    }
 
-}()); //self invoking function
+    //check if on road
+    if ((player.ele.x+40) < roadParam.left || (player.ele.x > (roadParam.left + roadParam.width))) {
+        player.ele.y += +1;
+        player.speed = player.speed > 0 ? (player.speed -0.1): 1;
+        
+    }
+
+    //movecar
+
+    player.ele.style.top = player.ele.y + 'px'
+    player.ele.style.left = player.ele.x + 'px'
+    }
+    animationGame = requestAnimationFrame(playGame)
+}

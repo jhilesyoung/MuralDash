@@ -1,5 +1,5 @@
 import "./styles/index.scss";
-import './scripts/chords.js'
+// import './scripts/chords.js'
 // import { puzzlePicture } from './scripts/harvard_pictures'
 import './scripts/track.js'
 
@@ -200,3 +200,96 @@ const background = new Image();
 // #hard {
 //     background-color: red;
 // }
+
+
+//LAST VERSION 
+
+
+// .game-board {
+//     display: flex;
+//     position: relative;
+//     flex-direction: row;
+//   }
+
+//   .puzzle-and-picture {
+//     display: flex;
+//     position: absolute;
+//   }
+
+//   .puzzle-frame {
+//     display: flex;
+//     position: absolute;
+//     height: 94vh;
+//     width: 70vw;
+//   }
+ 
+//   .frame-and-canvas {
+//     display: flex;
+//     position: absolute;
+//     flex-direction: row;
+//   }
+
+//   #myCanvas {
+//       z-index: -1;
+//      background-color: aliceblue;
+//      top: 103px;
+//      display: flex;
+//      position: absolute;
+//      left: 101px;
+//      height: 62vh;
+//      width: 49vw;
+//      border: 5px groove orange;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain; 
+//   }
+ 
+ 
+//  button:hover {
+//     cursor: pointer;
+// }
+
+// html { 
+//     background: url('../images/marble_background.jpg') no-repeat center center fixed; 
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     background-size: cover;
+//   }
+
+// .note-buttons {
+//     display: flex;
+//     position: absolute;
+//     flex-direction: column;
+//     right: 118px;
+//     top: 22px;
+// }
+
+// .music {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     position: relative;
+//     left: -7px;
+// }
+
+// .canvas-layer-one {
+//     z-index: 2;
+// }
+
+// #easy {
+//     background-color: green;
+// }
+
+// #medium {
+//     background-color: yellow;
+// }
+
+// #hard {
+//     background-color: red;
+// }
+
+// .easy-mode {
+//     display: none;
+// }
+
