@@ -1,5 +1,5 @@
 import "./styles/index.scss";
-// import './scripts/chords.js'
+import './scripts/chords.js'
 // import { puzzlePicture } from './scripts/harvard_pictures'
 import './scripts/track.js'
 

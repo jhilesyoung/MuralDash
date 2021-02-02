@@ -10,19 +10,26 @@
   
   <body>
     
-    <div class="btnStart"> Start Game </div>
+    <div class="btnStart"> 
+      <div class="title">Welcome to Mural Dash!</div>
+        <div class="description">The objective of the game is to pass as many cars as possible to increase your score. Please, click anywhere within this message to begin!</div>
+
+   </div>
     <div class="dashboard">
       <span class="speedDash"></span>/MPH | 
-      Score: <span class="scoreDash"></span> |
-      <span class="lifeDash"></span>
+      Score: <span class="scoreDash"></span> | 
+      Lives: <span class="lifeDash"></span>
     </div>
-    
-    <div id="container">
-      
-    </div>
+    <!--//game container-->
+    <div id="easy-container"></div>
+    <div id="medium-container"></div>
+    <div id="hard-container"></div>
     
     
     <div class="music">
+      <div>
+       
+      </div>
      <button  id="easy">Easy</button>
      <button  id="medium">Medium</button>
      <button  id="hard">Hard</button>
@@ -30,6 +37,11 @@
   </br>
      <button  id="stop-full-song">Stop!</button>
    </div> 
+
+   <div class="controls">
+        <img  src='./src/images/mural_dash_logo.gif' class="logo">
+        <img src='./src/images/controls.gif' class="how-to-play">
+   </div>
   </body>
   
   <script src="./src/scripts/track.js"></script>
