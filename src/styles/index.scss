@@ -10,7 +10,7 @@ html {
     position: relative;
     height: 85vh;
     width: 50vw;
-    left: 20%;
+    left: 21%;
     background-color: green;
     overflow: hidden;
     background-image: url('../images/easy_mode.png');
@@ -23,10 +23,10 @@ html {
     font-size: 1.5em;
     text-align: center;
     padding: 15px;
-    width: 49vw;
+    width: 48.02vw;
     display: flex;
     position: relative;
-    left: 19%;
+    left: 21%;
     justify-content: center;
     font-family: monospace;
 }
@@ -63,8 +63,8 @@ html {
 .music {
     display: flex;
     position: absolute;
-    top: 42%;
-    left: 7%;
+    top: 24%;
+    left: 3%;
     flex-direction: column;
 }
 
@@ -126,4 +126,10 @@ html {
     background-image: url('../images/raceCar.png');
     background-size: cover;
     z-index: 100;
+}
+
+.music-logo {
+    display: flex;
+    width: 216px;
+    position: relative;
 }
