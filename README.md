@@ -6,7 +6,7 @@
   
   <h2>Background & Overview</h2>
   <p> 
-   MuralDash is an interactive artwork racing game.
+   MuralDash is an artwork racing game.
   </p>
   
   <h2>Functionality & MVP</h2>
@@ -14,7 +14,6 @@
     <h3>Mural Dash will be a top-down racing game and will have the following core functionality for a minimum viable product:</h3>
     <ul>
       <li> Users can control the speed of the car with designated arrow keys.</li>
-      <li> Users can render a background image of a specified harvard museum picture.</li>
       <li> Users will have the option to pick a different theme song.</li>
      </ul>
   </p>
@@ -40,14 +39,12 @@
     <h3> This project will implement the following technologies:</h3>
       <ul>
         <li>tone.js for various song choices</li>
-        <li>paper.js to create the shape of the track</li>
-        <li>harvard art museum for used images(im not sure yet!)</li>
+        <li>Javascript to create the track</li>
       </ul>
       <h3> This project will feature the following scripts:</h3>
       <ul>
-        <li>board.js for game logic and elements for user control</li>
+        <li>track.js for game logic and elements for user control</li>
         <li>chord.js for song options logic </li>
-        <li>museum.js for combining api and render logic(bonus for random image background)</li>
       </ul>
   </p>
   
