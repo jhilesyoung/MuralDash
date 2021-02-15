@@ -1,5 +1,5 @@
 html { 
-  background: url('../images/marble_background.jpg') no-repeat center center fixed; 
+  background: url('../src/images/marble_background.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -13,7 +13,7 @@ html {
   left: 20%;
   background-color: green;
   overflow: hidden;
-  background-image: url('../images/easy_mode.png');
+  background-image: url('../src/images/easy_mode.png');
   align-items: center;
 }
 
@@ -99,7 +99,7 @@ html {
   top:0px;
   left:0px;
   border-radius: 5px;
-  background-image: url('../images/car2.png');
+  background-image: url('../src/images/car2.png');
   background-size: cover;
   z-index: 99;
   text-align: center;
@@ -123,7 +123,7 @@ html {
   bottom: 60px;
   left: 250px;
   border-radius: 5px;
-  background-image: url('../images/raceCar.png');
+  background-image: url('../src/images/raceCar.png');
   background-size: cover;
   z-index: 100;
 }
