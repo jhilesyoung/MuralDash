@@ -102,10 +102,10 @@ import * as Tone from 'tone';
     //     fullSong.stop(now + 2);
     // }
 
-    document.querySelector("#easy").addEventListener("click", fullSong);
+    document.querySelector("#theme-song").addEventListener("click", fullSong);
     document.querySelector("#stop-full-song").addEventListener("click", stopFullSong)
-    document.querySelector("#medium").addEventListener("click", MediumSong);
-    document.querySelector("#hard").addEventListener("click", HardSong);
+    // document.querySelector("#medium").addEventListener("click", MediumSong);
+    // document.querySelector("#hard").addEventListener("click", HardSong);
 
 
 
