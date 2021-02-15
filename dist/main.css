@@ -1,26 +1,129 @@
-button:hover {
-  cursor: pointer; }
+html { 
+  background: url('../images/marble_background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
-html {
-  background: url(images/marble_background.jpg) no-repeat center center fixed;
-  background-size: cover; }
-
-.puzzle-frame {
-  height: 90vh;
-  /* top: 11px; */
+#easy-container {
   position: relative;
-  top: 15px;
-  right: 100px; }
+  height: 85vh;
+  width: 50vw;
+  left: 20%;
+  background-color: green;
+  overflow: hidden;
+  background-image: url('../images/easy_mode.png');
+  align-items: center;
+}
 
-.note-buttons {
+.dashboard{
+  background-color: #d62dc8;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 15px;
+  width: 49vw;
+  display: flex;
   position: relative;
-  display: flex;
-  flex-direction: column; }
-
-.puzzle-and-picture {
-  display: flex;
+  left: 19%;
   justify-content: center;
-  align-items: center; }
+  font-family: monospace;
+}
 
+.btnStart {
+  position: absolute;
+  top: 273px;
+  left: 36%;
+  width: 200px;
+  border: 1px solid black;
+  background-color: rgb(0, 255, 221);
+  color: black;
+  font-size: 2em;
+  z-index: 200;
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
+}
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3R5bGVzL2luZGV4LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQSxrQkFBa0I7O0FBRWxCO0FBQ0E7QUFDQSx5QkFBeUI7O0FBRXpCO0FBQ0E7QUFDQSxlQUFlO0FBQ2Y7QUFDQTtBQUNBLGVBQWU7O0FBRWY7QUFDQTtBQUNBO0FBQ0EseUJBQXlCOztBQUV6QjtBQUNBO0FBQ0E7QUFDQSxzQkFBc0IiLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJidXR0b246aG92ZXIge1xuICBjdXJzb3I6IHBvaW50ZXI7IH1cblxuaHRtbCB7XG4gIGJhY2tncm91bmQ6IHVybChpbWFnZXMvbWFyYmxlX2JhY2tncm91bmQuanBnKSBuby1yZXBlYXQgY2VudGVyIGNlbnRlciBmaXhlZDtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjsgfVxuXG4ucHV6emxlLWZyYW1lIHtcbiAgaGVpZ2h0OiA5MHZoO1xuICAvKiB0b3A6IDExcHg7ICovXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgdG9wOiAxNXB4O1xuICByaWdodDogMTAwcHg7IH1cblxuLm5vdGUtYnV0dG9ucyB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgfVxuXG4ucHV6emxlLWFuZC1waWN0dXJlIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7IH1cbiJdLCJzb3VyY2VSb290IjoiIn0=*/
+.title {
+  font-size: large;
+  display: flex;
+  position: relative;
+  flex-flow: column;
+}
+
+.description {
+  font-size: medium;
+  display: flex;
+  position: relative;
+  flex-flow: column;
+}
+
+.music {
+  display: flex;
+  position: absolute;
+  top: 42%;
+  left: 7%;
+  flex-direction: column;
+}
+
+.music-description {
+  font-family: monospace;
+}
+
+.controls {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  right: 4%;
+  top: 10%;
+}
+
+.road {
+  position: absolute; height: 50px;
+  width: 250px;
+  top: 0;
+  text-align: center;
+  color: white;
+  background-color: #444;
+  border-radius: 2px;
+  left: 150px;
+  height: 55px;
+}
+
+.baddy {
+  position: absolute;
+  height: 80px;
+  width:40px;
+  top:0px;
+  left:0px;
+  border-radius: 5px;
+  background-image: url('../images/car2.png');
+  background-size: cover;
+  z-index: 99;
+  text-align: center;
+}
+
+.road:before{
+  content: "|";
+  vertical-align: top;
+  color:white;
+  width:1px;
+  height:10px;
+  line-height: 30px;
+  left:50%;
+  position: absolute;
+}
+
+.playerCar {
+  position: absolute;
+  height: 80px;
+  width: 50px;
+  bottom: 60px;
+  left: 250px;
+  border-radius: 5px;
+  background-image: url('../images/raceCar.png');
+  background-size: cover;
+  z-index: 100;
+}
