@@ -1,7 +1,7 @@
 
 <body>
   <h1> MuralDash</h1>
-  Top-down javascript racing game. *under construction*
+  <p>Top-down javascript racing game. *under construction*</p>
   <br/>
   
   <h2>Background & Overview</h2>
