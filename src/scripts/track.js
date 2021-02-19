@@ -1,5 +1,6 @@
 const speedDash = document.querySelector('.speedDash');
 const scoreDash = document.querySelector('.scoreDash');
+const highScoreDash = document.querySelector('.highScore')
 const lifeDash = document.querySelector('.lifeDash');
 const container = document.getElementById('easy-container');
 const btnStart = document.querySelector('.btnStart');
@@ -36,7 +37,8 @@ function startGame() {
         carstoPass: 15,
         score: 0,
         roadwidth: 250,
-        gameEndCounter: 0
+        gameEndCounter: 0,
+        highScore: 0
     }
     startBoard();
     setupBadGuys(5);
@@ -96,6 +98,11 @@ function updateDash() {
     scoreDash.innerHTML = player.score;
     lifeDash.innerHTML = player.lives;
     speedDash.innerHTML = Math.round(player.speed*14);
+    highScoreDash.innerHTML = player.highScore;
+    
+    if (player.highScore == undefined || 0) {
+        player.highScore = player.score
+    } 
 }
 
 function moveRoad() {
@@ -150,6 +157,7 @@ function moveBadGuys() {
             //reset car
             if ( y > 2000) {
                 player.score++;
+                player.highScore++;
                 if (player.score > player.carstoPass) {
                     gameOverPlay();
                 }
@@ -183,6 +191,7 @@ function gameOverPlay(){
     container.appendChild(div);
     player.gameEndCounter = 12;
     player.speed = 0;
+    player.highScore = player.score;
 }
 
 function playGame() {
@@ -231,6 +240,7 @@ function playGame() {
             gamePlay = false;
             cancelAnimationFrame(animationGame);
             btnStart.style.display = 'block';
+            gameOverPlay();
         }
     }
 }

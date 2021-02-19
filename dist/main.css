@@ -8,36 +8,36 @@ html {
 
 #easy-container {
   position: relative;
-  height: 85vh;
+  height: 80vh;
   width: 50vw;
-  left: 21%;
+  left: 22.5%;
   background-color: green;
   overflow: hidden;
-  background-image: url('../src/images/easy_mode.png');
+  background-image: url('../src/images/hard_mode.png');
   align-items: center;
 }
 
 .dashboard{
   background-color: #d62dc8;
-    color: white;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 15px;
-    width: 48.02vw;
-    display: flex;
-    position: relative;
-    left: 21%;
-    justify-content: center;
-    font-family: monospace;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 15px;
+  width: 47.6vw;
+  display: flex;
+  position: relative;
+  left: 21%;
+  justify-content: center;
+  font-family: monospace;
 }
 
 .btnStart {
   position: absolute;
   top: 273px;
-  left: 36%;
-  width: 200px;
+  left: 38%;
+  width: 17vw;
   border: 1px solid black;
-  background-color: rgb(0, 255, 221);
+  background-color: #00ffdd;
   color: black;
   font-size: 2em;
   z-index: 200;
