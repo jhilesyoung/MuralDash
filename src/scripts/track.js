@@ -4,6 +4,7 @@ const highScoreDash = document.querySelector('.highScore')
 const lifeDash = document.querySelector('.lifeDash');
 const container = document.getElementById('easy-container');
 const btnStart = document.querySelector('.btnStart');
+// const endModal = document.querySelector('.')
 btnStart.addEventListener('click', startGame);
 document.addEventListener('keydown', pressKeyOn);
 document.addEventListener('keyup', pressKeyOff);
