@@ -9,5 +9,6 @@ const background = new Image();
 //incorporate tone.js code in readMe and on application
 //fixed canvas, somewhat did highscore
 //research bounds
+//get speed to decrease on the right
 
 

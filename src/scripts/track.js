@@ -225,7 +225,7 @@ function playGame() {
     if ((player.ele.x+40) < roadParam.left || (player.ele.x > (roadParam.left + roadParam.width))) {
         player.ele.y += +1;
         player.speed = player.speed > 0 ? (player.speed -0.1): 1;
-        
+        // change roadParam.right and change the equivalent symbols to the opposite to slow down on the right
     }
 
     //movecar
