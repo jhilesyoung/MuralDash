@@ -1,11 +1,13 @@
 const speedDash = document.querySelector('.speedDash');
 const scoreDash = document.querySelector('.scoreDash');
-const highScoreDash = document.querySelector('.highScore')
+// const highScoreDash = document.querySelector('.highScore')
 const lifeDash = document.querySelector('.lifeDash');
 const container = document.getElementById('easy-container');
 const btnStart = document.querySelector('.btnStart');
+const gameOver = document.querySelector('.gameOver');
 // const endModal = document.querySelector('.')
 btnStart.addEventListener('click', startGame);
+gameOver.addEventListener('click', startGame);
 document.addEventListener('keydown', pressKeyOn);
 document.addEventListener('keyup', pressKeyOff);
 //Game V's
@@ -18,11 +20,13 @@ let keys = {
     ArrowLeft: false,
     ArrowRight: false,
 }
+gameOver.style.display = 'none';
 
 function startGame() {
     // console.log(gamePlay)
     container.innerHTML = ' ';
-    btnStart.style.display='none'
+    gameOver.style.display = 'none';
+    btnStart.style.display = 'none';
     let div = document.createElement('div');
     div.setAttribute('class', 'playerCar');
     div.x = 250;
@@ -38,8 +42,7 @@ function startGame() {
         carstoPass: 15,
         score: 0,
         roadwidth: 250,
-        gameEndCounter: 0,
-        highScore: 0
+        gameEndCounter: 0
     }
     startBoard();
     setupBadGuys(5);
@@ -99,11 +102,11 @@ function updateDash() {
     scoreDash.innerHTML = player.score;
     lifeDash.innerHTML = player.lives;
     speedDash.innerHTML = Math.round(player.speed*14);
-    highScoreDash.innerHTML = player.highScore;
+    // highScoreDash.innerHTML = player.highScore;
     
-    if (player.highScore == undefined || 0) {
-        player.highScore = player.score
-    } 
+    // if (player.highScore == undefined || 0) {
+    //     player.highScore = player.score
+    // } 
 }
 
 function moveRoad() {
@@ -158,7 +161,7 @@ function moveBadGuys() {
             //reset car
             if ( y > 2000) {
                 player.score++;
-                player.highScore++;
+                // player.highScore++;
                 if (player.score > player.carstoPass) {
                     gameOverPlay();
                 }
@@ -182,6 +185,7 @@ function moveBadGuys() {
 }
 
 function gameOverPlay(){
+    gameOver.style.display = 'block';
     let div = document.createElement('div');
     div.setAttribute('class', 'road');
     div.style.top = '0px';
@@ -192,7 +196,7 @@ function gameOverPlay(){
     container.appendChild(div);
     player.gameEndCounter = 12;
     player.speed = 0;
-    player.highScore = player.score;
+    // player.highScore = player.score;
 }
 
 function playGame() {
@@ -240,7 +244,7 @@ function playGame() {
         if (player.gameEndCounter == 0) {
             gamePlay = false;
             cancelAnimationFrame(animationGame);
-            btnStart.style.display = 'block';
+            gameOver.style.display = 'block';
             gameOverPlay();
         }
     }
