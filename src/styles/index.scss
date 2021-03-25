@@ -122,11 +122,11 @@ html {
 }
 
 .controls {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  right: 4%;
-  top: 10%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    right: 4%;
+    top: 28%;
 }
 
 .road {
@@ -182,3 +182,9 @@ html {
     width: 216px;
     position: relative;
 }
+
+.logo {
+    display: block;
+    position: absolute;
+    top: 12px;
+  }
