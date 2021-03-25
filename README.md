@@ -5,16 +5,22 @@
   <br/>
   
   <p>
+  
+  <h2> Overview </h2>
   <img src="src/images/mural_play.gif" width="700px">
   
-  The objective of the game is to dodge incoming cars as you increase or decrease your speed. You have 3 lives which are decrimented each time you collide with a car and if the counter reaches "0", then your game is over.
+  <h3> Controls & Objective </h3>
   
+  The objective of the game is to dodge incoming cars as you increase or decrease your speed. Use the up, down, left, and right arrow keys to increase/decrease or dodge the cars on the road. You have 3 lives which are decrimented each time you collide with a car and if the counter reaches "0", then your game is over.
+  
+  <h3> Technologies </h3>
   <img src="src/images/tonejs.png" width="700px">
+  
   
   The theme song is an original song that I transcribed to work with the library, tone.js. Above, you can see the individual notes of the song that is on a constant loop. I provided a play and pause button for an added element of immersion into this arcade style racer.
   </p>
   
-  <h2>Background & Overview</h2>
+  <h2>Background</h2>
   <p> 
    MuralDash is an artwork racing game.
   </p>
