@@ -14,12 +14,14 @@ document.addEventListener('keyup', pressKeyOff);
 let animationGame;
 let gamePlay = false
 let player;
+
 let keys = {
     ArrowUp: false,
     ArrowDown: false,
     ArrowLeft: false,
     ArrowRight: false,
 }
+
 gameOver.style.display = 'none';
 
 function startGame() {
@@ -138,7 +140,6 @@ function moveRoad() {
 function isCollide(a,b) {
     let aRect = a.getBoundingClientRect();
     let bRect = b.getBoundingClientRect();
-    // console.log(aRect);
     return !(
         (aRect.bottom < bRect.top) || (aRect.top > bRect.bottom) ||
         (aRect.right < bRect.left) || (aRect.left > bRect.right)
@@ -203,7 +204,6 @@ function playGame() {
 
     if (gamePlay) {
     updateDash();
-    //movement
     let roadParam = moveRoad();
     moveBadGuys();
     if (keys.ArrowUp) {
@@ -225,14 +225,13 @@ function playGame() {
         player.ele.x -= (player.speed/2)
     }
 
-    //check if on road
     if ((player.ele.x+40) < roadParam.left || (player.ele.x > (roadParam.left + roadParam.width))) {
         player.ele.y += +1;
         player.speed = player.speed > 0 ? (player.speed -0.1): 1;
-        // change roadParam.right and change the equivalent symbols to the opposite to slow down on the right
+        
     }
 
-    //movecar
+    
 
     player.ele.style.top = player.ele.y + 'px'
     player.ele.style.left = player.ele.x + 'px'
